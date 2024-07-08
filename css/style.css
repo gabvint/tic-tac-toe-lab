@@ -55,3 +55,32 @@ body {
     transform: translateY(-15px) scale(1.1);
   }
 
+
+  .container-X{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    font-size: 35px;
+  }
+
+  .container-0{
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    font-size: 35px; 
+  }
+
+  .score{
+    font-size: 30px;
+    
+  }

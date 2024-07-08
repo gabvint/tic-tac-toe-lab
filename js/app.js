@@ -15,13 +15,16 @@ let board;
 let turn; 
 let winner; 
 let tie; 
-
+let scoreX = 0; 
+let score0 = 0; 
 
 /*------------------------ Cached Element References ------------------------*/
 
 const squareEls = document.querySelectorAll('.sqr')
 const messageEl = document.querySelector('#message')
 const resetBtnEl = document.querySelector('#resetBtn')
+const playerX = document.querySelector('#player-scoreX')
+const player0 = document.querySelector('#player-score0')
 // console.dir(squareEls)
 // console.dir(messageEl)
 
@@ -80,6 +83,7 @@ const handleClick = (event) => {
     checkforWinner()
     checkForTie()
     switchPlayerTurn()
+    playerScore()
     render()
 }
 
@@ -129,6 +133,22 @@ const switchPlayerTurn = () => {
 
     console.log('turn: ' + turn)
 }
+
+
+const playerScore = () => {
+
+    if (winner === true){
+        if(turn === 'X'){
+            scoreX += 1
+            playerX.textContent = scoreX
+        }
+        else if(turn === '0'){
+            score0 += 1
+            player0.textContent = score0
+        }
+    }
+}
+
 
 /*----------------------------- Event Listeners -----------------------------*/
 
